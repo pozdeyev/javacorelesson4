@@ -1,3 +1,4 @@
+import javax.swing.*;
 
 /**
  * Java. Level 2. Lesson 4.
@@ -14,10 +15,17 @@
 */
 
 
-public class lesson4_messengerUI {
+public class Lesson4_messengerUI {
+
+    private static MainChatWindow mainChatWindow;  //Объявляем окно
 
     public static void main(String[] args) {
-
+        SwingUtilities.invokeLater (new Runnable() {
+            @Override
+            public void run() {
+                mainChatWindow = new MainChatWindow(); //Создаем экземпляр окна
+            }
+        }); //
     }
 
 }
